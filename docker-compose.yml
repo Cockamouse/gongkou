@@ -1,0 +1,11 @@
+version: '2'
+services:
+  gongkou:
+    container_name: gongkou
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/myapp/src
+      - ./gongkou.sh:/myapp/gongkou.sh
+    command: /bin/sh -c "tsc && sh ./gongkou.sh"

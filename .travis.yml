@@ -1,0 +1,16 @@
+sudo: required
+dist: trusty
+
+language: node_js
+
+services:
+  - docker
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.4.2
+
+install:
+  - docker-compose build
+
+script:
+  - docker-compose up
