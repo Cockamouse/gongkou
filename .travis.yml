@@ -14,3 +14,8 @@ install:
 
 script:
   - docker-compose up
+
+after_success:
+  - cat $TRAVIS_BUILD_DIR/out/download.sh
+  - ls -al $TRAVIS_BUILD_DIR/out/*
+  - rm -rf $TRAVIS_BUILD_DIR/out

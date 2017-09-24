@@ -7,5 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./src:/myapp/src
+      - ./out:/myapp/out
       - ./gongkou.sh:/myapp/gongkou.sh
     command: /bin/sh -c "tsc && sh ./gongkou.sh"
